@@ -5,5 +5,5 @@ import "popper.js/dist/umd/popper";
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
-var element = <div>Class based components</div>;
+var element = <button class="btn btn-danger">Class based components</button>;
 ReactDOM.render(element, document.getElementById("root"));
