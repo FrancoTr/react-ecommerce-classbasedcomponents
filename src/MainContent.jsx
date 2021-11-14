@@ -5,11 +5,11 @@ export default class MainContent extends Component {
     pageTitle: "Customers",
     customersCount: 5,
     customers: [
-      { id: 1, name: "Scott", phone: "0303-456" },
-      { id: 2, name: "Jones", phone: "2834-110" },
-      { id: 3, name: "Allen", phone: "8819-453" },
-      { id: 4, name: "James", phone: "4537-075" },
-      { id: 5, name: "John", phone: "2309-915" },
+      { id: 1, name: "Scott", phone: "0303-456", address: { city: "New Delhi" } },
+      { id: 2, name: "Jones", phone: "2834-110", address: { city: "Madrid" } },
+      { id: 3, name: "Allen", phone: "8819-453", address: { city: "London" } },
+      { id: 4, name: "James", phone: "4537-075", address: { city: "New York" } },
+      { id: 5, name: "John", phone: "2309-915", address: { city: "Buenos Aires" } },
     ],
   };
 
@@ -37,6 +37,7 @@ export default class MainContent extends Component {
                   <td>{cust.id}</td>
                   <td>{cust.name}</td>
                   <td>{cust.phone}</td>
+                  <td>{cust.address.city}</td>
                 </tr>
               );
             })}
