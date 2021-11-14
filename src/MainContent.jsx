@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 
 export default class MainContent extends Component {
-  state = { pageTitle: "Customers", customersCount: 5 };
+  state = {
+    pageTitle: "Customers",
+    customersCount: 5,
+    customers: [
+      { id: 1, name: "Scott", phone: "0303-456" },
+      { id: 2, name: "Jones", phone: "2834-110" },
+      { id: 3, name: "Allen", phone: "8819-453" },
+      { id: 4, name: "James", phone: "4537-075" },
+      { id: 5, name: "John", phone: "2309-915" },
+    ],
+  };
 
   render() {
     return (
@@ -14,6 +24,13 @@ export default class MainContent extends Component {
             Refresh
           </button>
         </h4>
+        <table className="table">
+          <tr>
+            <th>#</th>
+            <th>Customer Name</th>
+            <th>Phone</th>
+          </tr>
+        </table>
       </div>
     );
   }
