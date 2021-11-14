@@ -29,6 +29,7 @@ export default class MainContent extends Component {
             <th>#</th>
             <th>Customer Name</th>
             <th>Phone</th>
+            <th>Address</th>
           </tr>
           <tbody>
             {this.state.customers.map((cust) => {
