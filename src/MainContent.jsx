@@ -33,7 +33,7 @@ export default class MainContent extends Component {
           <tbody>
             {this.state.customers.map((cust) => {
               return (
-                <tr>
+                <tr key={cust.id}>
                   <td>{cust.id}</td>
                   <td>{cust.name}</td>
                   <td>{cust.phone}</td>
