@@ -38,7 +38,11 @@ export default class MainContent extends Component {
                   <td>{cust.id}</td>
                   <td>{cust.name}</td>
                   <td>
-                    {cust.phone ? cust.phone : <div className="bg-warning p-2">No Phone</div>}
+                    {cust.phone ? (
+                      cust.phone
+                    ) : (
+                      <div className="bg-warning p-2 text-center">No Phone</div>
+                    )}
                   </td>
                   <td>{cust.address.city}</td>
                 </tr>
