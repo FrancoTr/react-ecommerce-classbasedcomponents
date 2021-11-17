@@ -31,18 +31,7 @@ export default class MainContent extends Component {
             <th>Phone</th>
             <th>Address</th>
           </tr>
-          <tbody>
-            {this.state.customers.map((cust) => {
-              return (
-                <tr key={cust.id}>
-                  <td>{cust.id}</td>
-                  <td>{cust.name}</td>
-                  <td>{this.getPhoneToRender(cust.phone)}</td>
-                  <td>{cust.address.city}</td>
-                </tr>
-              );
-            })}
-          </tbody>
+          <tbody>{this.getCustomerRow()}</tbody>
         </table>
       </div>
     );
@@ -58,4 +47,17 @@ export default class MainContent extends Component {
   getPhoneToRender(phone) {
     return phone ? phone : <div className="bg-warning p-2 text-center">No Phone</div>;
   }
+
+  getCustomerRow = () => {
+    return this.state.customers.map((cust) => {
+      return (
+        <tr key={cust.id}>
+          <td>{cust.id}</td>
+          <td>{cust.name}</td>
+          <td>{this.getPhoneToRender(cust.phone)}</td>
+          <td>{cust.address.city}</td>
+        </tr>
+      );
+    });
+  };
 }
