@@ -37,13 +37,7 @@ export default class MainContent extends Component {
                 <tr key={cust.id}>
                   <td>{cust.id}</td>
                   <td>{cust.name}</td>
-                  <td>
-                    {cust.phone ? (
-                      cust.phone
-                    ) : (
-                      <div className="bg-warning p-2 text-center">No Phone</div>
-                    )}
-                  </td>
+                  <td>{this.getPhoneToRender(cust.phone)}</td>
                   <td>{cust.address.city}</td>
                 </tr>
               );
@@ -60,4 +54,8 @@ export default class MainContent extends Component {
       customersCount: 7,
     });
   };
+
+  getPhoneToRender(phone) {
+    return phone ? phone : <div className="bg-warning p-2 text-center">No Phone</div>;
+  }
 }
