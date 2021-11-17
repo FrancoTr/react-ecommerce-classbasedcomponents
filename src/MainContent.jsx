@@ -5,11 +5,41 @@ export default class MainContent extends Component {
     pageTitle: "Customers",
     customersCount: 5,
     customers: [
-      { id: 1, name: "Scott", phone: "0303-456", address: { city: "New Delhi" } },
-      { id: 2, name: "Jones", phone: null, address: { city: "Madrid" } },
-      { id: 3, name: "Allen", phone: "8819-453", address: { city: "London" } },
-      { id: 4, name: "James", phone: null, address: { city: "New York" } },
-      { id: 5, name: "John", phone: "2309-915", address: { city: "Buenos Aires" } },
+      {
+        id: 1,
+        name: "Scott",
+        phone: "0303-456",
+        address: { city: "New Delhi" },
+        photo: "https://picsum.photos/id/1010/60",
+      },
+      {
+        id: 2,
+        name: "Jones",
+        phone: null,
+        address: { city: "Madrid" },
+        photo: "https://picsum.photos/id/1010/60",
+      },
+      {
+        id: 3,
+        name: "Allen",
+        phone: "8819-453",
+        address: { city: "London" },
+        photo: "https://picsum.photos/id/1010/60",
+      },
+      {
+        id: 4,
+        name: "James",
+        phone: null,
+        address: { city: "New York" },
+        photo: "https://picsum.photos/id/1010/60",
+      },
+      {
+        id: 5,
+        name: "John",
+        phone: "2309-915",
+        address: { city: "Buenos Aires" },
+        photo: "https://picsum.photos/id/1010/60",
+      },
     ],
   };
 
