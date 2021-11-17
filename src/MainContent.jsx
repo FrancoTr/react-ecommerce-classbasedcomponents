@@ -16,7 +16,7 @@ export default class MainContent extends Component {
   render() {
     return (
       <div>
-        <h4 className="border-bottom m-1 p-1">
+        <h4 className="m-1 p-1">
           {this.state.pageTitle}
 
           <span className="badge badge-secondary m-2">{this.state.customersCount}</span>
