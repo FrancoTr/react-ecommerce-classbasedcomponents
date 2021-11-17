@@ -17,28 +17,28 @@ export default class MainContent extends Component {
         name: "Jones",
         phone: null,
         address: { city: "Madrid" },
-        photo: "https://picsum.photos/id/1010/60",
+        photo: "https://picsum.photos/id/1011/60",
       },
       {
         id: 3,
         name: "Allen",
         phone: "8819-453",
         address: { city: "London" },
-        photo: "https://picsum.photos/id/1010/60",
+        photo: "https://picsum.photos/id/1012/60",
       },
       {
         id: 4,
         name: "James",
         phone: null,
         address: { city: "New York" },
-        photo: "https://picsum.photos/id/1010/60",
+        photo: "https://picsum.photos/id/1013/60",
       },
       {
         id: 5,
         name: "John",
         phone: "2309-915",
         address: { city: "Buenos Aires" },
-        photo: "https://picsum.photos/id/1010/60",
+        photo: "https://picsum.photos/id/1014/60",
       },
     ],
   };
@@ -83,6 +83,9 @@ export default class MainContent extends Component {
       return (
         <tr key={cust.id}>
           <td>{cust.id}</td>
+          <td>
+            <img src={cust.photo} alt="customer" />
+          </td>
           <td>{cust.name}</td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
           <td>{cust.address.city}</td>
