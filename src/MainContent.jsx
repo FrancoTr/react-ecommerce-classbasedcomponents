@@ -57,6 +57,7 @@ export default class MainContent extends Component {
         <table className="table">
           <tr>
             <th>#</th>
+            <th>Photo</th>
             <th>Customer Name</th>
             <th>Phone</th>
             <th>Address</th>
