@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "index.css";
 
 export default class MainContent extends Component {
   state = {
@@ -45,9 +46,9 @@ export default class MainContent extends Component {
 
   customerNameStyle = (custName) => {
     if (custName.startsWith("S")) {
-      return { backgroundColor: "green" };
+      return "green-highlight";
     } else if (custName.startsWith("J")) {
-      return { backgroundColor: "red" };
+      return "red-highlight";
     } else {
       return {};
     }
