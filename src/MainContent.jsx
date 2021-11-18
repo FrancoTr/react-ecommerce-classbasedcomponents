@@ -86,7 +86,9 @@ export default class MainContent extends Component {
           <td>
             <img src={cust.photo} alt="customer" />
           </td>
-          <td>{cust.name}</td>
+          <td style={{ backgroundColor: cust.name.startsWith("S") ? "green" : "red" }}>
+            {cust.name}
+          </td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
           <td>{cust.address.city}</td>
         </tr>
