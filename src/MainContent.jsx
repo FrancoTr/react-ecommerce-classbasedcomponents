@@ -81,7 +81,7 @@ export default class MainContent extends Component {
   }
 
   getCustomerRow = () => {
-    return this.state.customers.map((cust) => {
+    return this.state.customers.map((cust, index) => {
       return (
         <tr key={cust.id}>
           <td>{cust.id}</td>
@@ -91,7 +91,7 @@ export default class MainContent extends Component {
               <button
                 className="btn btn-sm btn-secondary"
                 onClick={() => {
-                  this.onChangePictureClick(cust);
+                  this.onChangePictureClick(cust, index);
                 }}
               >
                 Change Picture
@@ -104,5 +104,11 @@ export default class MainContent extends Component {
         </tr>
       );
     });
+  };
+
+  onChangePictureClick = (cust, index) => {
+    var custArr = this.state.customers;
+    custArr[index].photo = "https://picsum.photos/id/104/60";
+    this.setState({ customers: custArr });
   };
 }
