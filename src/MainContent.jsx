@@ -44,16 +44,6 @@ export default class MainContent extends Component {
     ],
   };
 
-  customerNameStyle = (custName) => {
-    if (custName.startsWith("S")) {
-      return "green-highlight border-left";
-    } else if (custName.startsWith("J")) {
-      return "red-highlight border-right";
-    } else {
-      return "";
-    }
-  };
-
   render() {
     return (
       <div>
