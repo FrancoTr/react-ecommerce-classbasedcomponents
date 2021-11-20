@@ -87,6 +87,16 @@ export default class MainContent extends Component {
           <td>{cust.id}</td>
           <td>
             <img src={cust.photo} alt="customer" />
+            <div>
+              <button
+                className="btn btn-sm btn-secondary"
+                onClick={() => {
+                  this.onChangePictureClick(cust);
+                }}
+              >
+                Change Picture
+              </button>
+            </div>
           </td>
           <td className={this.customerNameStyle(cust.name)}>{cust.name}</td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
