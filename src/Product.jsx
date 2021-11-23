@@ -14,6 +14,7 @@ export default class Product extends Component {
             <h5 className="pt-2 border-top">{this.state.product.productName}</h5>
             <div>${this.state.product.price}</div>
           </div>
+          <div className="card-footer text-right">{this.props.children}</div>
         </div>
       </div>
     );
