@@ -18,8 +18,12 @@ export default class Product extends Component {
             <div className="float-left">
               <span className="badge">{this.state.product.quantity}</span>
               <div className="btn-group">
-                <button className="btn btn-outline-success">+</button>
-                <button className="btn btn-outline-success">-</button>
+                <button className="btn btn-outline-success" onClick={this.props.onIncrement}>
+                  +
+                </button>
+                <button className="btn btn-outline-success" onClick={this.props.onDecrement}>
+                  -
+                </button>
               </div>
             </div>
             <div className="float-right">{this.props.children}</div>
